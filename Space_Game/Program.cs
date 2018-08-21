@@ -45,16 +45,26 @@ namespace Space_Game
                 if (userChoice.ToLower() == "a")
                 {
                     Console.WriteLine("You picked small ship.");
-                    
+                    Console.WriteLine("You have $19,500 left.");
                 }
                 else if (userChoice.ToLower() == "b")
                 {
                     Console.WriteLine("You picked medium ship.");
+                    Console.WriteLine("You have $19,000 left.");
                 }
                 else if(userChoice.ToLower() == "c")
                 {
                     Console.WriteLine("You picked large ship.");
+                    Console.WriteLine("You have $18,000.");
+                    Console.ReadLine();
                 }
+                Console.WriteLine("You can now tranport Uriuman ");
+                Console.WriteLine("The trade value of uriuman is 1lb of uriuman is equal to 1 dallor.");
+                Console.WriteLine(" How much would you like?");
+
+                
+                
+
 
             }
 
