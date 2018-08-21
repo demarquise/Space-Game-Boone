@@ -10,6 +10,7 @@ namespace Space_Game
     {
         static void Main(string[] args)
         {
+            
             string playername = "";
 
 
@@ -34,12 +35,25 @@ namespace Space_Game
                 Console.WriteLine("You are now at planet Earth trading post, you have $20,000 earth dollars you neeed a space ship and cargo frist pick ship" +
                     " then cargo ");
                 Console.ReadLine();
+                Console.WriteLine("Choice:A small ship = $500   | Cargo compacity = 5,000 lb  | 1 warp speed  ");
+                Console.WriteLine("Choice:B medium ship = $1000 | Cargo compacity = 10,000 lb | 2 warp speed  ");
+                Console.WriteLine("Choice:C large ship = $2,000 | Cargo compacity = 20,000 lb | 3 warp speed  ");
                 
+                Console.WriteLine("Make a choice?");
+                string userChoice = Console.ReadLine();
 
-                string A = "small ship"; string B = "medium ship"; string C = "large ship";
-
+                if (userChoice.ToLower() == "a")
                 {
-
+                    Console.WriteLine("You picked small ship.");
+                    
+                }
+                else if (userChoice.ToLower() == "b")
+                {
+                    Console.WriteLine("You picked medium ship.");
+                }
+                else if(userChoice.ToLower() == "c")
+                {
+                    Console.WriteLine("You picked large ship.");
                 }
 
             }
