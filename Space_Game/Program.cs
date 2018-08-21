@@ -40,29 +40,36 @@ namespace Space_Game
                 Console.WriteLine("Choice:C large ship = $2,000 | Cargo compacity = 15,000 lb | 3 warp speed  ");
                 Console.WriteLine("Make a choice?");
 
-                string userChoice = Console.ReadLine();
-
-                if (userChoice.ToLower() == "a")
+                bool pickedShip = false;
+                do
                 {
-                    Console.WriteLine("You picked small ship.");
-                    Console.WriteLine("You have $19,500 left.");
-                }
-                else if (userChoice.ToLower() == "b")
-                {
-                    Console.WriteLine("You picked medium ship.");
-                    Console.WriteLine("You have $19,000 left.");
-                }
-                else if(userChoice.ToLower() == "c")
-                {
-                    Console.WriteLine("You picked large ship.");
-                    Console.WriteLine("You have $18,000.");
+                    string userChoice = Console.ReadLine();
                     
-                }
-                else
-                {
-                    Console.WriteLine("Make a choice?");
-                    Console.ReadLine();
-                }
+                    if (userChoice.ToLower() == "a")
+                    {
+                        Console.WriteLine("You picked small ship.");
+                        Console.WriteLine("You have $19,500 left.");
+                        pickedShip = true;
+                    }
+                    else if (userChoice.ToLower() == "b")
+                    {
+                        Console.WriteLine("You picked medium ship.");
+                        Console.WriteLine("You have $19,000 left.");
+                        pickedShip = true;
+                    }
+                    else if (userChoice.ToLower() == "c")
+                    {
+                        Console.WriteLine("You picked large ship.");
+                        Console.WriteLine("You have $18,000.");
+                        pickedShip = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Choose A,B or C ");
+
+
+                    }
+                } while (pickedShip == false);
 
                 Console.WriteLine("You can now tranport Uriuman ");
                 Console.WriteLine("The trade value of uriuman is 1lb of uriuman is equal to 1 dallor.");
@@ -71,27 +78,33 @@ namespace Space_Game
                 Console.WriteLine("choice B | 10,000 lbs if you choose medium");
                 Console.WriteLine("choice C | 15,000 lbs if you choose large");
                 Console.WriteLine(" Make a pick?");
+                bool choose = false;
+                do
+                {
+                    string userPick = Console.ReadLine();
 
-                string userPick = Console.ReadLine();
-
-                if(userPick.ToLower() == "a")
-                {
-                    Console.WriteLine("You picked 5,000 lbs");
-                    
-                }
-                else if(userPick.ToLower() == "b") 
-                {
-                    Console.WriteLine("You picked 10,000 lbs");
-                    
-                }
-                else if(userPick.ToLower() == "c")
-                {
-                    Console.WriteLine("You picked 15,000 lbs");
-                    
-                }
-               
+                    if (userPick.ToLower() == "a")
+                    {
+                        Console.WriteLine("You picked 5,000 lbs");
+                        choose = true;
+                    }
+                    else if (userPick.ToLower() == "b")
+                    {
+                        Console.WriteLine("You picked 10,000 lbs");
+                        choose = true;
+                    }
+                    else if (userPick.ToLower() == "c")
+                    {
+                        Console.WriteLine("You picked 15,000 lbs");
+                        choose = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("choose A,B or C");
+                    }
+                } while (choose == false);
                 
-
+                
 
             }
 
