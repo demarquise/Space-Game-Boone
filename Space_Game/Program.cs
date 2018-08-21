@@ -10,8 +10,31 @@ namespace Space_Game
     {
         static void Main(string[] args)
         {
+            string playername = "";
             
-            
+
+            {
+                Console.WriteLine("Welcome to Space Game");
+                Console.ReadLine();
+                Console.Write("Enter your playername : ");
+                playername = Console.ReadLine();
+                Console.WriteLine("Welcome: "+ playername);
+
+                Console.ReadLine();
+                Console.WriteLine("This is the story line of:  "+ playername);
+                Console.WriteLine("This space game is about a space traveler named " + playername + " who was from a destroyed  planet named Z22." +
+                    "The inner core of his planet blew up causing  everything and everyone on his planet to parish." +
+                    playername +" was the only survivor on his planet to make it out from a small 1 passenger space capsule" +
+                    "that his dad built. His dad before he died was able to put him in it before the planet blew. his dad left him 20,000$ an set the ship" +
+                    "to go to the nearest human livable planet witch happen to be planet earth." + playername +" lived on earth secretly" +
+                    "without ever being seen staying on a deserted island. Here he was able to build a boat and sail to the nearest" +
+                    "mainland" + playername +" quickly takes notice to the G market trading post which is a  international space trading center." +
+                    "Here you can buy space ships an cargo." +playername +" has 20,000$ and wants a ship an cargo to get to another planet to trade cargo");
+
+                
+
+            }
+
         }
     }
 }
