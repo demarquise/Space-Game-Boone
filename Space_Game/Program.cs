@@ -37,9 +37,9 @@ namespace Space_Game
                 Console.ReadLine();
                 Console.WriteLine("Choice:A small ship = $500   | Cargo compacity = 5,000 lb  | 1 warp speed  ");
                 Console.WriteLine("Choice:B medium ship = $1000 | Cargo compacity = 10,000 lb | 2 warp speed  ");
-                Console.WriteLine("Choice:C large ship = $2,000 | Cargo compacity = 20,000 lb | 3 warp speed  ");
-                
+                Console.WriteLine("Choice:C large ship = $2,000 | Cargo compacity = 15,000 lb | 3 warp speed  ");
                 Console.WriteLine("Make a choice?");
+
                 string userChoice = Console.ReadLine();
 
                 if (userChoice.ToLower() == "a")
@@ -56,13 +56,40 @@ namespace Space_Game
                 {
                     Console.WriteLine("You picked large ship.");
                     Console.WriteLine("You have $18,000.");
+                    
+                }
+                else
+                {
+                    Console.WriteLine("Make a choice?");
                     Console.ReadLine();
                 }
+
                 Console.WriteLine("You can now tranport Uriuman ");
                 Console.WriteLine("The trade value of uriuman is 1lb of uriuman is equal to 1 dallor.");
-                Console.WriteLine(" How much would you like?");
+                Console.WriteLine("You choice of wheight of cargo is dependent on ship size.");
+                Console.WriteLine("choice A | 5,000 lbs if you choose small");
+                Console.WriteLine("choice B | 10,000 lbs if you choose medium");
+                Console.WriteLine("choice C | 15,000 lbs if you choose large");
+                Console.WriteLine(" Make a pick?");
 
-                
+                string userPick = Console.ReadLine();
+
+                if(userPick.ToLower() == "a")
+                {
+                    Console.WriteLine("You picked 5,000 lbs");
+                    
+                }
+                else if(userPick.ToLower() == "b") 
+                {
+                    Console.WriteLine("You picked 10,000 lbs");
+                    
+                }
+                else if(userPick.ToLower() == "c")
+                {
+                    Console.WriteLine("You picked 15,000 lbs");
+                    
+                }
+               
                 
 
 
