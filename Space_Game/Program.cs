@@ -44,7 +44,7 @@ namespace Space_Game
                 do
                 {
                     string userChoice = Console.ReadLine();
-                    
+
                     if (userChoice.ToLower() == "a")
                     {
                         Console.WriteLine("You picked small ship.");
@@ -103,8 +103,39 @@ namespace Space_Game
                         Console.WriteLine("choose A,B or C");
                     }
                 } while (choose == false);
-                
-                
+
+                Console.WriteLine("Now " + playername + " has chosen cargo an a space ship and are ready to travel |--|");
+                Console.WriteLine("What planet would you like to go to");
+                Console.WriteLine("choice A | planet : BOT");
+                Console.WriteLine("choice B | planet : TOPA");
+                Console.WriteLine("Choice C | planet : KEWA");
+                Console.WriteLine("Enter A,B or C");
+
+                bool myanswer = false;
+                do
+                {
+                    string myplanet = Console.ReadLine();
+                    if (myplanet.ToLower() == "a")
+                    {
+                        Console.WriteLine("You have choosen planet BOT");
+                        myanswer = true;
+                    }
+                    else if (myplanet.ToLower() == "b")
+                    {
+                        Console.WriteLine("You choose planet TOPA");
+                        myanswer = true;
+                    }
+                    else if (myplanet.ToLower() == "b")
+                    {
+                        Console.WriteLine("You choose planet KEWA");
+                        myanswer = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Choose A,B or C");
+                    }
+
+                } while (myanswer == false);
 
             }
 
