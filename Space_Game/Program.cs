@@ -137,6 +137,17 @@ namespace Space_Game
 
                 } while (myanswer == false);
 
+                string travel = Console.ReadLine();
+                
+                {
+
+
+                }
+
+
+
+
+
             }
 
         }
