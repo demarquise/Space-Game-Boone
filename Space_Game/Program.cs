@@ -15,7 +15,9 @@ namespace Space_Game
 
 
             {
-                Console.WriteLine("Welcome to Space Game");
+                
+
+                Console.WriteLine("Welcome to Space Game --------|------|---------|");
                 Console.ReadLine();
                 Console.Write("Enter your playername : ");
                 playername = Console.ReadLine();
@@ -39,6 +41,7 @@ namespace Space_Game
                 Console.WriteLine("Choice:B medium ship = $1000 | Cargo compacity = 10,000 lb | 2 warp speed  ");
                 Console.WriteLine("Choice:C large ship = $2,000 | Cargo compacity = 15,000 lb | 3 warp speed  ");
                 Console.WriteLine("Make a choice?");
+                
 
                 bool pickedShip = false;
                 do
@@ -70,6 +73,8 @@ namespace Space_Game
 
                     }
                 } while (pickedShip == false);
+                Console.ReadLine();
+                Console.Clear();
 
                 Console.WriteLine("You can now tranport Uriuman ");
                 Console.WriteLine("The trade value of uriuman is 1lb of uriuman is equal to 1 dallor.");
@@ -103,6 +108,8 @@ namespace Space_Game
                         Console.WriteLine("choose A,B or C");
                     }
                 } while (choose == false);
+                Console.ReadLine();
+                Console.Clear();
 
                 Console.WriteLine("Now " + playername + " has chosen cargo an a space ship and are ready to travel |--|");
                 Console.WriteLine("What planet would you like to go to");
@@ -114,6 +121,7 @@ namespace Space_Game
                 bool myanswer = false;
                 do
                 {
+                    
                     string myplanet = Console.ReadLine();
                     if (myplanet.ToLower() == "a")
                     {
@@ -125,7 +133,7 @@ namespace Space_Game
                         Console.WriteLine("You choose planet TOPA");
                         myanswer = true;
                     }
-                    else if (myplanet.ToLower() == "b")
+                    else if (myplanet.ToLower() == "c")
                     {
                         Console.WriteLine("You choose planet KEWA");
                         myanswer = true;
@@ -136,13 +144,55 @@ namespace Space_Game
                     }
 
                 } while (myanswer == false);
+                Console.ReadLine();
 
-                string travel = Console.ReadLine();
+                Console.Clear();
+
+                Console.WriteLine("Good luck "+ playername +" on your advernture the time right below is the time it is now ");
+
+                DateTime thetime = DateTime.Now;
+                Console.WriteLine(thetime.ToString());
+                Console.ReadLine();
+
+                Console.Clear();
+
+                Console.WriteLine("    ---");
+                Console.WriteLine("  -------");
+                Console.WriteLine("  -------");
+                Console.WriteLine("   -----");
+                Console.WriteLine("      |  ");
+                Console.WriteLine("      |  ");
+                Console.WriteLine("      |  ");
+                Console.WriteLine("      |  ");
+                Console.ReadLine();
+                Console.Clear();
+                Console.WriteLine("      |  ");
+                Console.WriteLine("      |  ");
+                Console.WriteLine("      |  ");
+                Console.WriteLine("    ---");
+                Console.WriteLine("  -------");
+                Console.WriteLine("  -------");
+                Console.WriteLine("   -----");
+                Console.ReadLine();
+                Console.Clear();
+
+                Console.WriteLine("you are at your destination the time is now");
+                DateTime timenow = DateTime.Now;
+                Console.WriteLine(timenow.AddYears(3));
                 
-                {
+            
+                
 
 
-                }
+
+
+
+
+
+
+
+
+
 
 
 
