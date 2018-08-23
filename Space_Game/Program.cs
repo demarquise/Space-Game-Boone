@@ -41,38 +41,41 @@ namespace Space_Game
             Console.ReadLine();
             Console.WriteLine("You are now at planet Earth trading post, you have $20,000 earth dollars you neeed a space ship and cargo frist pick ship" +
                 " then cargo ");
-           
-
+            Console.ReadLine();
+            Console.Clear();
         }
         public static void ship()
         {
-            Console.ReadLine();
+            
             Console.WriteLine("Choice:A small ship = $500   | Cargo compacity = 5,000 lb  | 1 warp speed  ");
             Console.WriteLine("Choice:B medium ship = $1000 | Cargo compacity = 10,000 lb | 2 warp speed  ");
             Console.WriteLine("Choice:C large ship = $2,000 | Cargo compacity = 15,000 lb | 3 warp speed  ");
             Console.WriteLine("Make a choice?");
-
+            
             bool pickedShip = false;
             do
             {
                 string userChoice = Console.ReadLine();
-
+                int a = 500;
+                int b = 1000;
+                int c = 2000;
+                int main = 20000;
                 if (userChoice.ToLower() == "a")
                 {
                     Console.WriteLine("You picked small ship.");
-                    Console.WriteLine("You have $19,500 left.");
+                    Console.WriteLine( main - a);
                     pickedShip = true;
                 }
                 else if (userChoice.ToLower() == "b")
                 {
                     Console.WriteLine("You picked medium ship.");
-                    Console.WriteLine("You have $19,000 left.");
+                    Console.WriteLine(main - b);
                     pickedShip = true;
                 }
                 else if (userChoice.ToLower() == "c")
                 {
                     Console.WriteLine("You picked large ship.");
-                    Console.WriteLine("You have $18,000.");
+                    Console.WriteLine(main - c);
                     pickedShip = true;
                 }
                 else
@@ -102,6 +105,7 @@ namespace Space_Game
                 if (userPick.ToLower() == "a")
                 {
                     Console.WriteLine("You picked 5,000 lbs");
+                    
                     choose = true;
                 }
                 else if (userPick.ToLower() == "b")
@@ -195,13 +199,51 @@ namespace Space_Game
             Console.WriteLine("you have a arived at your destination");
             DateTime timenow = DateTime.Now;
             Console.WriteLine(timenow.AddYears(3));
-        }   
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("How much cargo would you like to trade");
+            Console.WriteLine("you can only trade 50,100,200");
+            Console.WriteLine("choose A for 50");
+            Console.WriteLine("choose B for 100");
+            Console.WriteLine("choose C for 200");
             
-                
+            Console.ReadLine();
+
+            string pick = Console.ReadLine();
+
+            bool mypick = false;
+            do
+
+                switch (pick)
+                {
+                    case "a":
+                        Console.WriteLine("you sold 50 punds of cargo");
+                        mypick = true;
+                        break;
+                    case "b":
+                        Console.WriteLine("you sold  100 pounds of cargo");
+                        mypick = true;
+                        break;
+                    case "c":
+                        Console.WriteLine("you sold 200 pounds of cargo");
+                        mypick = true;
+                        break;
+                    default:
+                        Console.WriteLine("choose again");
+                        break;
+
+
+                } while (mypick == false);
 
 
 
 
+
+            
+        }
+
+       
 
 
 
