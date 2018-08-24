@@ -8,17 +8,28 @@ namespace Space_Game
 {
     class Program
     {
+        static int cargo1 = 5000;
+        static int cargo2 = 10000;
+        static int cargo3 = 15000;
+        static int main = 20000;
+        static int a = 500;
+        static int b = 1000;
+        static int c = 2000;
+        static string playername = "";
+
         static void Main(string[] args)
         {
+
             gamename();
             ship();
             cargo();
             planet();
+
         }
 
         public static void gamename()
         {
-            string playername = "";
+
 
 
 
@@ -46,36 +57,37 @@ namespace Space_Game
         }
         public static void ship()
         {
-            
+
             Console.WriteLine("Choice:A small ship = $500   | Cargo compacity = 5,000 lb  | 1 warp speed  ");
             Console.WriteLine("Choice:B medium ship = $1000 | Cargo compacity = 10,000 lb | 2 warp speed  ");
             Console.WriteLine("Choice:C large ship = $2,000 | Cargo compacity = 15,000 lb | 3 warp speed  ");
             Console.WriteLine("Make a choice?");
-            
+
             bool pickedShip = false;
             do
             {
                 string userChoice = Console.ReadLine();
-                int a = 500;
-                int b = 1000;
-                int c = 2000;
-                int main = 20000;
+
+
                 if (userChoice.ToLower() == "a")
                 {
+                    main = main - a;
                     Console.WriteLine("You picked small ship.");
-                    Console.WriteLine( main - a);
+                    Console.WriteLine("You have " + main + " left");
                     pickedShip = true;
                 }
                 else if (userChoice.ToLower() == "b")
                 {
+                    main = main - b;
                     Console.WriteLine("You picked medium ship.");
-                    Console.WriteLine(main - b);
+                    Console.WriteLine("you have" + main + "lrft");
                     pickedShip = true;
                 }
                 else if (userChoice.ToLower() == "c")
                 {
+                    main = main - c;
                     Console.WriteLine("You picked large ship.");
-                    Console.WriteLine(main - c);
+                    Console.WriteLine("you have" + main + "left");
                     pickedShip = true;
                 }
                 else
@@ -87,9 +99,13 @@ namespace Space_Game
             } while (pickedShip == false);
             Console.ReadLine();
             Console.Clear();
+
         }
+
         public static void cargo()
         {
+
+
             Console.WriteLine("You can now tranport Uriuman ");
             Console.WriteLine("The trade value of uriuman is 1lb of uriuman is equal to 1 dallor.");
             Console.WriteLine("You choice of wheight of cargo is dependent on ship size.");
@@ -100,22 +116,28 @@ namespace Space_Game
             bool choose = false;
             do
             {
+
                 string userPick = Console.ReadLine();
 
                 if (userPick.ToLower() == "a")
                 {
+                    main = main - cargo1;
                     Console.WriteLine("You picked 5,000 lbs");
-                    
+                    Console.WriteLine("you have "+ main+"left");
                     choose = true;
                 }
                 else if (userPick.ToLower() == "b")
                 {
+                    main = main - cargo1;
                     Console.WriteLine("You picked 10,000 lbs");
+                    Console.WriteLine("you have " + main + "left");
                     choose = true;
                 }
                 else if (userPick.ToLower() == "c")
                 {
+                    main = main - cargo3;
                     Console.WriteLine("You picked 15,000 lbs");
+                    Console.WriteLine("you have " + main + "left");
                     choose = true;
                 }
                 else
@@ -128,7 +150,7 @@ namespace Space_Game
         }
         public static void planet()
         {
-            string playername = "";
+            
 
             Console.WriteLine("Now " + playername + " has chosen cargo an a space ship and are ready to travel |--|");
             Console.WriteLine("What planet would you like to go to");
@@ -136,7 +158,7 @@ namespace Space_Game
             Console.WriteLine("choice B | planet : TOPA");
             Console.WriteLine("Choice C | planet : KEWA");
             Console.WriteLine("Enter A,B or C");
-            
+
 
             bool myanswer = false;
             do
@@ -207,43 +229,45 @@ namespace Space_Game
             Console.WriteLine("choose A for 50");
             Console.WriteLine("choose B for 100");
             Console.WriteLine("choose C for 200");
-            
+
             Console.ReadLine();
 
             string pick = Console.ReadLine();
 
-            bool mypick = false;
-            do
-
                 switch (pick)
                 {
                     case "a":
+                        main = main + 50;
                         Console.WriteLine("you sold 50 punds of cargo");
-                        mypick = true;
+                        Console.WriteLine("you have"+ main+"left");
+                        
                         break;
                     case "b":
+                        main = main + 100;
                         Console.WriteLine("you sold  100 pounds of cargo");
-                        mypick = true;
+                        Console.WriteLine("you have" + main + "left");
+                        
                         break;
                     case "c":
+                        main = main + 200;
                         Console.WriteLine("you sold 200 pounds of cargo");
-                        mypick = true;
+                        Console.WriteLine("you have" + main + "left");
+                        
                         break;
                     default:
                         Console.WriteLine("choose again");
                         break;
 
 
-                } while (mypick == false);
+                } 
 
 
 
 
 
-            
+
         }
 
-       
 
 
 
@@ -256,8 +280,9 @@ namespace Space_Game
 
 
 
-            
 
-        
+
+
+
     }
 }

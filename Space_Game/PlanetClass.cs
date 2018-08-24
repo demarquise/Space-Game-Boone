@@ -8,6 +8,6 @@ namespace Space_Game
 {
     class Planet
     {
-      
+        
     }
 }
