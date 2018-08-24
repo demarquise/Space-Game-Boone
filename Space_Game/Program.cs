@@ -80,7 +80,7 @@ namespace Space_Game
                 {
                     main = main - b;
                     Console.WriteLine("You picked medium ship.");
-                    Console.WriteLine("you have" + main + "lrft");
+                    Console.WriteLine("you have " + main + " left");
                     pickedShip = true;
                 }
                 else if (userChoice.ToLower() == "c")
@@ -123,21 +123,21 @@ namespace Space_Game
                 {
                     main = main - cargo1;
                     Console.WriteLine("You picked 5,000 lbs");
-                    Console.WriteLine("you have "+ main+"left");
+                    Console.WriteLine("you have " + main + " left");
                     choose = true;
                 }
                 else if (userPick.ToLower() == "b")
                 {
-                    main = main - cargo1;
+                    main = main - cargo2;
                     Console.WriteLine("You picked 10,000 lbs");
-                    Console.WriteLine("you have " + main + "left");
+                    Console.WriteLine("you have " + main + " left");
                     choose = true;
                 }
                 else if (userPick.ToLower() == "c")
                 {
                     main = main - cargo3;
                     Console.WriteLine("You picked 15,000 lbs");
-                    Console.WriteLine("you have " + main + "left");
+                    Console.WriteLine("you have " + main + " left");
                     choose = true;
                 }
                 else
@@ -187,7 +187,6 @@ namespace Space_Game
 
             } while (myanswer == false);
             Console.ReadLine();
-
             Console.Clear();
 
             Console.WriteLine("Good luck " + playername + " on your advernture the time right below is the time it is now ");
@@ -230,7 +229,7 @@ namespace Space_Game
             Console.WriteLine("choose B for 100");
             Console.WriteLine("choose C for 200");
 
-            Console.ReadLine();
+            
 
             string pick = Console.ReadLine();
 
@@ -239,29 +238,30 @@ namespace Space_Game
                     case "a":
                         main = main + 50;
                         Console.WriteLine("you sold 50 punds of cargo");
-                        Console.WriteLine("you have"+ main+"left");
-                        
-                        break;
+                        Console.WriteLine("you have " + main + " left");
+                         break;
+
                     case "b":
                         main = main + 100;
                         Console.WriteLine("you sold  100 pounds of cargo");
-                        Console.WriteLine("you have" + main + "left");
-                        
-                        break;
+                        Console.WriteLine("you have " + main + " left");
+                         break;
+
                     case "c":
                         main = main + 200;
                         Console.WriteLine("you sold 200 pounds of cargo");
-                        Console.WriteLine("you have" + main + "left");
-                        
-                        break;
+                        Console.WriteLine("you have " + main + " left");
+                         break;
+
                     default:
                         Console.WriteLine("choose again");
                         break;
 
+                    
 
-                } 
+                }
 
-
+            Console.ReadLine();
 
 
 
