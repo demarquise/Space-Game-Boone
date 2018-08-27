@@ -8,6 +8,7 @@ namespace Space_Game
 {
     class Program
     {
+        
         static int cargo1 = 5000;
         static int cargo2 = 10000;
         static int cargo3 = 15000;
@@ -19,7 +20,8 @@ namespace Space_Game
 
         static void Main(string[] args)
         {
-
+            
+           
             gamename();
             ship();
             cargo();
@@ -31,7 +33,23 @@ namespace Space_Game
         {
 
 
+            Console.ForegroundColor = ConsoleColor.Blue;
 
+            Console.Title = "ASCII Art";
+            string title = @"
+ ____                                     ______    __    ___             
+/\  _`\                                  /\__  _\__/\ \__/\_ \            
+\ \ \L\_\ __      ___     ___   __  __   \/_/\ \/\_\ \ ,_\//\ \      __   
+ \ \  _\/'__`\  /' _ `\  /'___\/\ \/\ \     \ \ \/\ \ \ \/ \ \ \   /'__`\ 
+  \ \ \/\ \L\.\_/\ \/\ \/\ \__/\ \ \_\ \     \ \ \ \ \ \ \_ \_\ \_/\  __/ 
+   \ \_\ \__/.\_\ \_\ \_\ \____\\/`____ \     \ \_\ \_\ \__\/\____\ \____\
+    \/_/\/__/\/_/\/_/\/_/\/____/ `/___/> \     \/_/\/_/\/__/\/____/\/____/
+                                    /\___/                                
+                                    \/__/                                 
+                                                                 ";
+
+            Console.WriteLine(title);
+            Console.Read();
 
             Console.WriteLine("Welcome to Space Game --------|------|---------|");
             Console.ReadLine();
@@ -104,7 +122,7 @@ namespace Space_Game
 
         public static void cargo()
         {
-
+            Console.ForegroundColor = ConsoleColor.DarkRed;
 
             Console.WriteLine("You can now tranport Uriuman ");
             Console.WriteLine("The trade value of uriuman is 1lb of uriuman is equal to 1 dallor.");
@@ -150,7 +168,7 @@ namespace Space_Game
         }
         public static void planet()
         {
-            
+            Console.ForegroundColor = ConsoleColor.Green;
 
             Console.WriteLine("Now " + playername + " has chosen cargo an a space ship and are ready to travel |--|");
             Console.WriteLine("What planet would you like to go to");
