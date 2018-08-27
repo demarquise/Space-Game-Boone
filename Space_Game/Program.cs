@@ -8,7 +8,7 @@ namespace Space_Game
 {
     class Program
     {
-        
+
         static int cargo1 = 5000;
         static int cargo2 = 10000;
         static int cargo3 = 15000;
@@ -20,13 +20,13 @@ namespace Space_Game
 
         static void Main(string[] args)
         {
-            
-           
+
+
             gamename();
             ship();
             cargo();
             planet();
-
+            nextplanet();
         }
 
         public static void gamename()
@@ -38,17 +38,16 @@ namespace Space_Game
             Console.Title = "ASCII Art";
             string title = @"
 
-____                                     ______    __    ___             
-/\  _`\                                  /\__  _\__/\ \__/\_ \            
-\ \ \L\_\ __      ___     ___   __  __   \/_/\ \/\_\ \ ,_\//\ \      __   
- \ \  _\/'__`\  /' _ `\  /'___\/\ \/\ \     \ \ \/\ \ \ \/ \ \ \   /'__`\ 
-  \ \ \/\ \L\.\_/\ \/\ \/\ \__/\ \ \_\ \     \ \ \ \ \ \ \_ \_\ \_/\  __/             Made by Demarquise & Derrick |Games|
-   \ \_\ \__/.\_\ \_\ \_\ \____\\/`____ \     \ \_\ \_\ \__\/\____\ \____\
-    \/_/\/__/\/_/\/_/\/_/\/____/ `/___/> \     \/_/\/_/\/__/\/____/\/____/
-                                    /\___/                                
-                                    \/__/                                 
-                                                 
-     
+─────────────────────────▄▀█▀█▀▄
+────────────────────────▀▀▀▀▀▀▀▀▀
+─────────█──────────────▄─░░░░░▄
+─▄─█────▐▌▌───█──▄─▄───▐▌▌░░░░░▌▌
+▐█▐▐▌█▌▌█▌█▌▄█▐▌▐█▐▐▌█▌█▌█░░░░░▌▌
+█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+█░█░░░█ █▀▀ █░░ █▀▀ █▀▀█ █▀▄▀█ █▀▀ ░█                       By Demarquise & Derrick |Games|
+█░█▄█▄█ █▀▀ █░░ █░░ █░░█ █░▀░█ █▀▀ ░█
+█░░▀░▀░ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀ ▀░░░▀ ▀▀▀ ░█
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
                               
                                                             ";
 
@@ -76,6 +75,40 @@ ____                                     ______    __    ___
                 " then cargo ");
             Console.ReadLine();
             Console.Clear();
+
+            Console.WriteLine("Good luck");
+
+            Console.Title = "ASCII Art";
+            string sign = @"
+
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$_____$$$$
+$$$$_____$$$$$$$$$$$$$$$_____$$$$
+$$$$_____$$$$$$$$$$$$$$$_____$$$$
+$$$$_____$$____$$$____$$_____$$$$
+$$$$_____$______$______$_____$$$$
+$$$$_____$______$______$_____$$$$
+$$$$_____$____$$$$$$$$$$$$$$$$$$$
+$$$$_____$___$$___________$$$$$$$
+$$$$_____$__$$_______________$$$$
+$$$$__________$$_____________$$$$
+$$$$___________$$___________$$$$$
+$$$$_____________$_________$$$$$$
+$$$$$_____________________$$$$$$$
+$$$$$$___________________$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                              
+                                                            ";
+
+            Console.WriteLine(sign);
+            Console.Read();
+            Console.ReadLine();
+            Console.Clear();
+
+
         }
         public static void ship()
         {
@@ -219,23 +252,20 @@ ____                                     ______    __    ___
 
             Console.Clear();
 
-            Console.WriteLine("    ---");
-            Console.WriteLine("  -------");
-            Console.WriteLine("  -------");
-            Console.WriteLine("   -----");
-            Console.WriteLine("      |  ");
-            Console.WriteLine("      |  ");
-            Console.WriteLine("      |  ");
-            Console.WriteLine("      |  ");
-            Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("      |  ");
-            Console.WriteLine("      |  ");
-            Console.WriteLine("      |  ");
-            Console.WriteLine("    ---");
-            Console.WriteLine("  -------");
-            Console.WriteLine("  -------");
-            Console.WriteLine("   -----");
+            Console.Title = "ASCII Art";
+            string title = @"
+
+                    ──────────────▄▀█▀█▀▄
+─────────────▀▀▀▀▀▀▀▀▀ 
+─────────────▄─░░░░░▄
+───█──▄─▄───▐▌▌░░░░░▌▌
+▌▄█▐▌▐█▐▐▌█▌█▌█░░░░░▌▌
+
+                              
+                                                            ";
+
+            Console.WriteLine(title);
+            Console.Read();
             Console.ReadLine();
             Console.Clear();
 
@@ -251,59 +281,61 @@ ____                                     ______    __    ___
             Console.WriteLine("choose B for 100");
             Console.WriteLine("choose C for 200");
 
-            
+
 
             string pick = Console.ReadLine();
 
-                switch (pick)
-                {
-                    case "a":
-                        main = main + 50;
-                        Console.WriteLine("you sold 50 punds of cargo");
-                        Console.WriteLine("you have " + main + " left");
-                         break;
+            switch (pick)
+            {
+                case "a":
+                    main = main + 50;
+                    Console.WriteLine("you sold 50 punds of cargo");
+                    Console.WriteLine("you have " + main + " left");
+                    break;
 
-                    case "b":
-                        main = main + 100;
-                        Console.WriteLine("you sold  100 pounds of cargo");
-                        Console.WriteLine("you have " + main + " left");
-                         break;
+                case "b":
+                    main = main + 100;
+                    Console.WriteLine("you sold  100 pounds of cargo");
+                    Console.WriteLine("you have " + main + " left");
+                    break;
 
-                    case "c":
-                        main = main + 200;
-                        Console.WriteLine("you sold 200 pounds of cargo");
-                        Console.WriteLine("you have " + main + " left");
-                         break;
+                case "c":
+                    main = main + 200;
+                    Console.WriteLine("you sold 200 pounds of cargo");
+                    Console.WriteLine("you have " + main + " left");
+                    break;
 
-                    default:
-                        Console.WriteLine("choose again");
-                        break;
+                default:
+                    Console.WriteLine("choose again");
+                    break;
 
-                    
 
-                }
+
+            }
 
             Console.ReadLine();
+            Console.Clear();
+
+
+
+        }
+        public static void nextplanet()
+        {
+
+
+
+
+
+
+
+
+
+
 
 
 
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
