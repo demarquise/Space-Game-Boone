@@ -244,6 +244,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.ReadLine();
             Console.Clear();
 
+            Console.WriteLine("Keep in mind each planet is 5 light years away.");
             Console.WriteLine("Good luck " + playername + " on your advernture the time right below is the time it is now ");
 
             DateTime thetime = DateTime.Now;
@@ -253,7 +254,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.Clear();
 
             Console.Title = "ASCII Art";
-            string title = @"
+            string pic = @"
 
                     ──────────────▄▀█▀█▀▄
 ─────────────▀▀▀▀▀▀▀▀▀ 
@@ -264,7 +265,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                               
                                                             ";
 
-            Console.WriteLine(title);
+            Console.WriteLine(pic);
             Console.Read();
             Console.ReadLine();
             Console.Clear();
@@ -323,16 +324,101 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
         {
 
 
+            Console.WriteLine("Good job " + playername + " on your urianiam trade");
+            Console.WriteLine("You have " + main + " left");
+            Console.WriteLine("You should go to another planet now witch planet would you like to go to now");
+
+            Console.WriteLine("choice A | planet : BOT");
+            Console.WriteLine("choice B | planet : TOPA");
+            Console.WriteLine("Choice C | planet : KEWA");
+            Console.WriteLine("Enter A,B or C");
 
 
+            bool myanswer = false;
+            do
+            {
+
+                string myplanet = Console.ReadLine();
+                if (myplanet.ToLower() == "a")
+                {
+                    Console.WriteLine("You have choosen planet BOT");
+                    myanswer = true;
+                }
+                else if (myplanet.ToLower() == "b")
+                {
+                    Console.WriteLine("You choose planet TOPA");
+                    myanswer = true;
+                }
+                else if (myplanet.ToLower() == "c")
+                {
+                    Console.WriteLine("You choose planet KEWA");
+                    myanswer = true;
+                }
+                else
+                {
+                    Console.WriteLine("Choose A,B or C");
+                }
+
+            } while (myanswer == false);
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("the current time now is");
+
+            DateTime thetime = DateTime.Now;
+            Console.WriteLine(thetime.ToString());
+
+            Console.WriteLine("Goodluck on your trip");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.Title = "ASCII Art";
+            string pic = @"
+
+                    ──────────────▄▀█▀█▀▄
+─────────────▀▀▀▀▀▀▀▀▀ 
+─────────────▄─░░░░░▄
+───█──▄─▄───▐▌▌░░░░░▌▌
+▌▄█▐▌▐█▐▐▌█▌█▌█░░░░░▌▌
+
+                              
+                                                            ";
+
+            Console.WriteLine(pic);
+            Console.Read();
+            Console.ReadLine();
+            Console.Clear();
+
+            DateTime timenow = DateTime.Now;
+            Console.WriteLine(timenow.AddYears(3));
+            Console.ReadLine();
 
 
+            Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF TIME");
+
+            Console.Title = "ASCII Art";
+            string bye = @"
 
 
+░░░░░░░░░░░░░░░░░░
+░░░│▒│ ./▒/░░░░░░░░░
+░░░│▒│/▒/░░░░░░░░░░
+░░░│▒ /▒/.─┬─┐░░░░░░
+░░░│▒│▒|▒│▒│░░░░░░░
+░░░┌┴─┴─┐┘─┘░░░░░░
+░░░│▒┌──┘▒▒▒│░░░░░
+░░░└┐▒▒▒▒▒▒┌┘░░░░░
+░░░░└┐▒▒▒▒┌┘░░░░░░
+░░░░░░░░░░░░░░░░░░
+░█▀█░██░█▀█░█▀░██░
+░█░█░█■░█▀█░█░░█➨░
+░█▀▀░█▄░█░█░█▄░█▄░
+░░░░░░░░░░░░░░░░░░
+                
+                                                            ";
 
-
-
-
+            Console.WriteLine(bye);
+            Console.Read();
 
 
         }
