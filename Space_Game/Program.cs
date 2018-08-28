@@ -9,16 +9,16 @@ namespace Space_Game
     class Program
     {
 
-        static int cargo1 = 5000;
-        static int cargo2 = 10000;
-        static int cargo3 = 15000;
+        static readonly int cargo1 = 5000;
+        static readonly int cargo2 = 10000;
+        static readonly int cargo3 = 15000;
         static int main = 20000;
-        static int a = 500;
-        static int b = 1000;
-        static int c = 2000;
+        static readonly int a = 500;
+        static readonly int b = 1000;
+        static readonly int c = 2000;
         static string playername = "";
-        static int fuel1 = 2000;
-        static int fuel2 = 4000;
+        static readonly int fuel1 = 2000;
+        static readonly int fuel2 = 4000;
        
         static void Main(string[] args)
         {
@@ -61,16 +61,21 @@ namespace Space_Game
 █░░▀░▀░ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀ ▀░░░▀ ▀▀▀ ░█
 ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
                               
-                                                            ";
+                                              Press Enter to Continue             ";
 
             Console.WriteLine(title);
             Console.Read();
-
+            
             Console.WriteLine("Welcome to Space Game --------|------|---------|");
             Console.ReadLine();
-            Console.Write("Enter your playername : ");
+            if ( playername == "")
+            {
+                
+            }
+            Console.Write("Enter your playername and press enter: ");
             playername = Console.ReadLine();
             Console.WriteLine("Welcome: " + playername);
+            Console.WriteLine("                            Press Enter to continue                 ");
 
 
             Console.ReadLine();
