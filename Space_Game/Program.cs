@@ -19,7 +19,7 @@ namespace Space_Game
         static string playername = "";
         static readonly int fuel1 = 2000;
         static readonly int fuel2 = 4000;
-       
+
         static void Main(string[] args)
         {
 
@@ -37,7 +37,7 @@ namespace Space_Game
             while (main > 0);
 
             exit();
-           
+
         }
 
 
@@ -65,13 +65,10 @@ namespace Space_Game
 
             Console.WriteLine(title);
             Console.Read();
-            
+
             Console.WriteLine("Welcome to Space Game --------|------|---------|");
             Console.ReadLine();
-            if ( playername == "")
-            {
-                
-            }
+
             Console.Write("Enter your playername and press enter: ");
             playername = Console.ReadLine();
             Console.WriteLine("Welcome: " + playername);
@@ -445,15 +442,15 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     break;
             } while (false);
 
-        } 
-            public static void exit()
-            {
+        }
+        public static void exit()
+        {
 
 
-                Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF TIME");
+            Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF TIME");
 
-                Console.Title = "ASCII Art";
-                string bye = @"
+            Console.Title = "ASCII Art";
+            string bye = @"
 
 
 ░░░░░░░░░░░░░░░░░░
@@ -473,12 +470,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 
                                                             ";
 
-                Console.WriteLine(bye);
-                Console.Read();
-            }
-
+            Console.WriteLine(bye);
+            Console.Read();
         }
 
-
     }
+
+
+}
 
