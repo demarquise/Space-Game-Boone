@@ -19,6 +19,7 @@ namespace Space_Game
         static string playername = "";
         static readonly int fuel1 = 2000;
         static readonly int fuel2 = 4000;
+        
 
         static void Main(string[] args)
         {
@@ -230,6 +231,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine("Choice C | planet : KEWA");
             Console.WriteLine("Enter A,B or C");
 
+            double travelTime = 0;
+            double distance = 23;
 
             bool myanswer = false;
             do
@@ -238,8 +241,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 string myplanet = Console.ReadLine();
                 if (myplanet.ToLower() == "a")
                 {
-                    Console.WriteLine("You have choosen planet BOT");
+                     travelTime = distance / (Math.Pow(1, 10 / 3) + Math.Pow(10 - 1, -11 / 3));
+                     Console.WriteLine("You have choosen planet BOT");
                     myanswer = true;
+
+                    
                 }
                 else if (myplanet.ToLower() == "b")
                 {
@@ -471,12 +477,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 
                                                             ";
 
+
             Console.WriteLine(bye);
             Console.Read();
         }
 
+
     }
-
-
 }
-
