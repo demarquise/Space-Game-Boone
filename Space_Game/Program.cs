@@ -17,7 +17,9 @@ namespace Space_Game
         static int b = 1000;
         static int c = 2000;
         static string playername = "";
-
+        static int fuel1 = 2000;
+        static int fuel2 = 4000;
+        static bool exit = main == 0;
         static void Main(string[] args)
         {
 
@@ -25,8 +27,11 @@ namespace Space_Game
             gamename();
             ship();
             cargo();
-            planet();
-            nextplanet();
+            do
+            {
+                planet();
+                nextplanet();
+            } while (exit = main == 0);
         }
 
         public static void gamename()
@@ -393,6 +398,39 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine(timenow.AddYears(3));
             Console.ReadLine();
 
+
+            Console.WriteLine("looks like you are going to need some fuel now");
+            Console.WriteLine("how much would you like");
+            Console.WriteLine("1/2 full select : A | full select : B");
+
+            string choose = Console.ReadLine();
+            switch (choose)
+
+            {
+                case "a":
+                    main = main - fuel1;
+                    Console.WriteLine("you picked 1/2 full");
+                    Console.WriteLine("you have " + main + " left");
+                    break;
+
+                case "b":
+                    main = main - fuel2;
+                    Console.WriteLine("you picked 1/2 full");
+                    Console.WriteLine("you have " + main + " left");
+                    break;
+
+                default:
+                    Console.WriteLine("Choose Again");
+                    break;
+
+            }
+
+            Console.ReadLine();
+            Console.Clear();
+
+
+
+            
 
             Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF TIME");
 
