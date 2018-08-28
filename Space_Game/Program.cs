@@ -68,10 +68,7 @@ namespace Space_Game
             
             Console.WriteLine("Welcome to Space Game --------|------|---------|");
             Console.ReadLine();
-            if ( playername == "")
-            {
-                
-            }
+            
             Console.Write("Enter your playername and press enter: ");
             playername = Console.ReadLine();
             Console.WriteLine("Welcome: " + playername);
