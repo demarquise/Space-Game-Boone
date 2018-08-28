@@ -19,7 +19,7 @@ namespace Space_Game
         static string playername = "";
         static int fuel1 = 2000;
         static int fuel2 = 4000;
-        static bool exit = main == 0;
+       
         static void Main(string[] args)
         {
 
@@ -27,12 +27,19 @@ namespace Space_Game
             gamename();
             ship();
             cargo();
+
             do
             {
                 planet();
                 nextplanet();
-            } while (exit = main == 0);
+
+            }
+            while (main > 0);
+
+            exit();
+           
         }
+
 
         public static void gamename()
         {
@@ -64,6 +71,7 @@ namespace Space_Game
             Console.Write("Enter your playername : ");
             playername = Console.ReadLine();
             Console.WriteLine("Welcome: " + playername);
+
 
             Console.ReadLine();
             Console.WriteLine("This is the story line of:  " + playername);
@@ -332,53 +340,54 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine("Good job " + playername + " on your urianiam trade");
             Console.WriteLine("You have " + main + " left");
             Console.WriteLine("You should go to another planet now witch planet would you like to go to now");
-
-            Console.WriteLine("choice A | planet : BOT");
-            Console.WriteLine("choice B | planet : TOPA");
-            Console.WriteLine("Choice C | planet : KEWA");
-            Console.WriteLine("Enter A,B or C");
-
-
-            bool myanswer = false;
             do
             {
+                Console.WriteLine("choice A | planet : BOT");
+                Console.WriteLine("choice B | planet : TOPA");
+                Console.WriteLine("Choice C | planet : KEWA");
+                Console.WriteLine("Enter A,B or C");
 
-                string myplanet = Console.ReadLine();
-                if (myplanet.ToLower() == "a")
+
+                bool myanswer = false;
+                do
                 {
-                    Console.WriteLine("You have choosen planet BOT");
-                    myanswer = true;
-                }
-                else if (myplanet.ToLower() == "b")
-                {
-                    Console.WriteLine("You choose planet TOPA");
-                    myanswer = true;
-                }
-                else if (myplanet.ToLower() == "c")
-                {
-                    Console.WriteLine("You choose planet KEWA");
-                    myanswer = true;
-                }
-                else
-                {
-                    Console.WriteLine("Choose A,B or C");
-                }
 
-            } while (myanswer == false);
-            Console.ReadLine();
-            Console.Clear();
+                    string myplanet = Console.ReadLine();
+                    if (myplanet.ToLower() == "a")
+                    {
+                        Console.WriteLine("You have choosen planet BOT");
+                        myanswer = true;
+                    }
+                    else if (myplanet.ToLower() == "b")
+                    {
+                        Console.WriteLine("You choose planet TOPA");
+                        myanswer = true;
+                    }
+                    else if (myplanet.ToLower() == "c")
+                    {
+                        Console.WriteLine("You choose planet KEWA");
+                        myanswer = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Choose A,B or C");
+                    }
 
-            Console.WriteLine("the current time now is");
+                } while (myanswer == false);
+                Console.ReadLine();
+                Console.Clear();
 
-            DateTime thetime = DateTime.Now;
-            Console.WriteLine(thetime.ToString());
+                Console.WriteLine("the current time now is");
 
-            Console.WriteLine("Goodluck on your trip");
-            Console.ReadLine();
-            Console.Clear();
+                DateTime thetime = DateTime.Now;
+                Console.WriteLine(thetime.ToString());
 
-            Console.Title = "ASCII Art";
-            string pic = @"
+                Console.WriteLine("Goodluck on your trip");
+                Console.ReadLine();
+                Console.Clear();
+
+                Console.Title = "ASCII Art";
+                string pic = @"
 
                     ──────────────▄▀█▀█▀▄
 ─────────────▀▀▀▀▀▀▀▀▀ 
@@ -389,53 +398,57 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                               
                                                             ";
 
-            Console.WriteLine(pic);
-            Console.Read();
-            Console.ReadLine();
-            Console.Clear();
+                Console.WriteLine(pic);
+                Console.Read();
+                Console.ReadLine();
+                Console.Clear();
 
-            DateTime timenow = DateTime.Now;
-            Console.WriteLine(timenow.AddYears(3));
-            Console.ReadLine();
+                DateTime timenow = DateTime.Now;
+                Console.WriteLine(timenow.AddYears(3));
+                Console.ReadLine();
 
 
-            Console.WriteLine("looks like you are going to need some fuel now");
-            Console.WriteLine("how much would you like");
-            Console.WriteLine("1/2 full select : A | full select : B");
+                Console.WriteLine("looks like you are going to need some fuel now");
+                Console.WriteLine("how much would you like");
+                Console.WriteLine("1/2 full select : A | full select : B");
 
-            string choose = Console.ReadLine();
-            switch (choose)
+                string choose = Console.ReadLine();
+                switch (choose)
 
+                {
+                    case "a":
+                        main = main - fuel1;
+                        Console.WriteLine("you picked 1/2 full");
+                        Console.WriteLine("you have " + main + " left");
+                        break;
+
+                    case "b":
+                        main = main - fuel2;
+                        Console.WriteLine("you picked 1/2 full");
+                        Console.WriteLine("you have " + main + " left");
+                        break;
+
+                    default:
+                        Console.WriteLine("Choose Again");
+                        break;
+
+                }
+
+                Console.ReadLine();
+                Console.Clear();
+                if (main > 0)
+                    break;
+            } while (false);
+
+        } 
+            public static void exit()
             {
-                case "a":
-                    main = main - fuel1;
-                    Console.WriteLine("you picked 1/2 full");
-                    Console.WriteLine("you have " + main + " left");
-                    break;
-
-                case "b":
-                    main = main - fuel2;
-                    Console.WriteLine("you picked 1/2 full");
-                    Console.WriteLine("you have " + main + " left");
-                    break;
-
-                default:
-                    Console.WriteLine("Choose Again");
-                    break;
-
-            }
-
-            Console.ReadLine();
-            Console.Clear();
 
 
+                Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF TIME");
 
-            
-
-            Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF TIME");
-
-            Console.Title = "ASCII Art";
-            string bye = @"
+                Console.Title = "ASCII Art";
+                string bye = @"
 
 
 ░░░░░░░░░░░░░░░░░░
@@ -455,12 +468,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 
                                                             ";
 
-            Console.WriteLine(bye);
-            Console.Read();
-
+                Console.WriteLine(bye);
+                Console.Read();
+            }
 
         }
 
 
     }
-}
+
