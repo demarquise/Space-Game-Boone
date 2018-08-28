@@ -84,7 +84,8 @@ namespace Space_Game
                 "to go to the nearest human livable planet witch happen to be planet earth." + playername + " lived on earth secretly" +
                 "without ever being seen staying on a deserted island. Here he was able to build a boat and sail to the nearest" +
                 "mainland" + playername + " quickly takes notice to the G market trading post which is a  international space trading center." +
-                "Here you can buy space ships an cargo." + playername + " has 20,000$ and wants a ship an cargo to get to another planet to trade cargo");
+                "Here you can buy space ships an cargo." + playername + " has 20,000$ and wants a ship an cargo to get to another planet to trade cargo" +
+                " Press Enter to continue ");
             Console.ReadLine();
             Console.WriteLine("You are now at planet Earth trading post, you have $20,000 earth dollars you neeed a space ship and cargo frist pick ship" +
                 " then cargo ");
