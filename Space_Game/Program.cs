@@ -462,7 +462,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             double travelTime = 0;
             double distance = 0;
 
-            travelTime = distance / (Math.Pow(1, 10 / 3) + Math.Pow(10 - 1, -11 / 3));
+     }
 
             
         }
