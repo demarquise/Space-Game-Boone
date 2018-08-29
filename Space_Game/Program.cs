@@ -37,7 +37,7 @@ namespace Space_Game
             }
             while (main > 0);
 
-            exit();
+            Exit();
 
         }
 
@@ -46,7 +46,7 @@ namespace Space_Game
         {
 
 
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.Green;
 
             Console.Title = "ASCII Art";
             string title = @"
@@ -62,7 +62,7 @@ namespace Space_Game
 █░░▀░▀░ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀ ▀░░░▀ ▀▀▀ ░█
 ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
                               
-                                              Press Enter to Continue             ";
+                                    Press Enter To Continue             ";
 
             Console.WriteLine(title);
             Console.Read();
@@ -73,7 +73,7 @@ namespace Space_Game
             Console.Write("Enter your playername and press enter: ");
             playername = Console.ReadLine();
             Console.WriteLine("Welcome: " + playername);
-            Console.WriteLine("                            Press Enter to continue                 ");
+            Console.WriteLine("                                    Press Enter To continue                               ");
 
 
             Console.ReadLine();
@@ -86,10 +86,12 @@ namespace Space_Game
                 "without ever being seen staying on a deserted island. Here he was able to build a boat and sail to the nearest" +
                 "mainland" + playername + " quickly takes notice to the G market trading post which is a  international space trading center." +
                 "Here you can buy space ships an cargo." + playername + " has 20,000$ and wants a ship an cargo to get to another planet to trade cargo" +
-                " Press Enter to continue ");
+                "                                     " +
+                "Press Enter to continue");
             Console.ReadLine();
             Console.WriteLine("You are now at planet Earth trading post, you have $20,000 earth dollars you neeed a space ship and cargo frist pick ship" +
                 " then cargo ");
+            Console.WriteLine("Press Enter To continue");
             Console.ReadLine();
             Console.Clear();
 
@@ -118,7 +120,7 @@ $$$$$_____________________$$$$$$$
 $$$$$$___________________$$$$$$$$
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                               
-                                                            ";
+                                 Press Enter To Continue                           ";
 
             Console.WriteLine(sign);
             Console.Read();
@@ -134,6 +136,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine("Choice:B medium ship = $1000 | Cargo compacity = 10,000 lb | 2 warp speed  ");
             Console.WriteLine("Choice:C large ship = $2,000 | Cargo compacity = 15,000 lb | 3 warp speed  ");
             Console.WriteLine("Make a choice?");
+            Console.WriteLine("                   Press Enter To Continue                 ");
 
             bool pickedShip = false;
             do
@@ -169,6 +172,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
                 }
             } while (pickedShip == false);
+            Console.WriteLine("                            Press Enter To Continue                 ");
             Console.ReadLine();
             Console.Clear();
 
@@ -176,7 +180,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
         public static void cargo()
         {
-            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.ForegroundColor = ConsoleColor.Green;
 
             Console.WriteLine("You can now tranport Uriuman ");
             Console.WriteLine("The trade value of uriuman is 1lb of uriuman is equal to 1 dallor.");
@@ -185,6 +189,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine("choice B | 10,000 lbs if you choose medium");
             Console.WriteLine("choice C | 15,000 lbs if you choose large");
             Console.WriteLine(" Make a pick?");
+            Console.WriteLine("                            Press Enter To Continue                 ");
             bool choose = false;
             do
             {
@@ -217,6 +222,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     Console.WriteLine("choose A,B or C");
                 }
             } while (choose == false);
+            Console.WriteLine("                            Press Enter To Continue                 ");
             Console.ReadLine();
             Console.Clear();
         }
@@ -230,8 +236,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine("choice B | planet : TOPA");
             Console.WriteLine("Choice C | planet : KEWA");
             Console.WriteLine("Enter A,B or C");
+            Console.WriteLine("                            Press Enter To Continue                 ");
 
-          
+
 
             bool myanswer = false;
             do
@@ -261,7 +268,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 }
 
             } while (myanswer == false);
-            
+            Console.WriteLine("                            Press Enter To Continue                 ");
+
             Console.ReadLine();
             Console.Clear();
 
@@ -270,6 +278,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
             DateTime thetime = DateTime.Now;
             Console.WriteLine(thetime.ToString());
+            Console.WriteLine("                            Press Enter To Continue                 ");
             Console.ReadLine();
 
             Console.Clear();
@@ -284,7 +293,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 ▌▄█▐▌▐█▐▐▌█▌█▌█░░░░░▌▌
 
                               
-                                                            ";
+                                 Press Enter To Continue                           ";
 
             Console.WriteLine(pic);
             Console.Read();
@@ -294,20 +303,22 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine("you have a arived at your destination");
             DateTime timenow = DateTime.Now;
             Console.WriteLine(timenow.AddYears(3));
+            Console.WriteLine("                            Press Enter To Continue                 ");
             Console.ReadLine();
             Console.Clear();
 
             
             Console.WriteLine("How much cargo would you like to trade");
-            Console.Write("Enter your number :");
+            Console.Write("Enter your number and press enter to continue:");
             string choice = "";
             choice = Console.ReadLine();
-
             main = main + Convert.ToInt32(choice);
 
+            
             Console.WriteLine("you have traded " + choice );
             Console.WriteLine("you have " + main + " now");
             Console.ReadLine();
+            Console.WriteLine("                            Press Enter To Continue                 ");
             Console.Clear();
              
 
@@ -323,12 +334,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine("Good job " + playername + " on your urianiam trade");
             Console.WriteLine("You have " + main + " left");
             Console.WriteLine("You should go to another planet now witch planet would you like to go to now");
+            Console.WriteLine("                            Press Enter To Continue                 ");
             do
             {
                 Console.WriteLine("choice A | planet : BOT");
                 Console.WriteLine("choice B | planet : TOPA");
                 Console.WriteLine("Choice C | planet : KEWA");
                 Console.WriteLine("Enter A,B or C");
+                Console.WriteLine("                            Press Enter To Continue                 ");
 
 
                 bool myanswer = false;
@@ -360,6 +373,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
                 } while (myanswer == false);
                 Console.ReadLine();
+                Console.WriteLine("                            Press Enter To Continue                 ");
                 Console.Clear();
 
                 Console.WriteLine("the current time now is");
@@ -369,6 +383,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
                 Console.WriteLine("Goodluck on your trip");
                 Console.ReadLine();
+                Console.WriteLine("                            Press Enter To Continue                 ");
                 Console.Clear();
 
                 Console.Title = "ASCII Art";
@@ -381,7 +396,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 ▌▄█▐▌▐█▐▐▌█▌█▌█░░░░░▌▌
 
                               
-                                                            ";
+                                         Press Enter To Continue                   ";
 
                 Console.WriteLine(pic);
                 Console.Read();
@@ -390,12 +405,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
                 DateTime timenow = DateTime.Now;
                 Console.WriteLine(timenow.AddYears(3));
+                Console.WriteLine("                            Press Enter To Continue                 ");
                 Console.ReadLine();
 
 
                 Console.WriteLine("looks like you are going to need some fuel now");
                 Console.WriteLine("how much would you like");
                 Console.WriteLine("1/2 full select : A | full select : B");
+                Console.WriteLine("                            Press Enter To Continue                 ");
 
                 string choose = Console.ReadLine();
                 switch (choose)
@@ -418,6 +435,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                         break;
 
                 }
+                Console.WriteLine("                            Press Enter To Continue                 ");
 
                 Console.ReadLine();
                 Console.Clear();
@@ -426,11 +444,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             } while (false);
 
         }
-        public static void exit()
+        public static void Exit()
         {
 
 
             Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF TIME");
+            Console.WriteLine("                            Press Enter To Continue                 ");
 
             Console.Title = "ASCII Art";
             string bye = @"
@@ -457,7 +476,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine(bye);
             Console.Read();
         }
-        public static void equation()
+        public static void Equation()
         {
             double travelTime = 0;
             double distance = 0;
