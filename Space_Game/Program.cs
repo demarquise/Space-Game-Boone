@@ -164,7 +164,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 {
                     main = main - c;
                     Console.WriteLine("You picked large ship.");
-                    Console.WriteLine("you have" + main + "left");
+                    Console.WriteLine("you have " + main + " left");
                     pickedShip = true;
                 }
                 else
@@ -474,12 +474,15 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 Console.WriteLine("                            Press Enter To Continue                 ");
                 Console.Clear();
 
+                Console.WriteLine("-------------------------money-> " + main + " <-money---------------------------------");
+                Console.WriteLine("");
                 Console.WriteLine("the current time now is");
 
                 DateTime thetime = DateTime.Now;
                 Console.WriteLine(thetime.ToString());
 
                 Console.WriteLine("Goodluck on your trip");
+                Console.WriteLine("                            Press Enter To Continue                 ");
                 Console.ReadLine();
                 Console.WriteLine("                            Press Enter To Continue                 ");
                 Console.Clear();
@@ -501,17 +504,20 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 Console.ReadLine();
                 Console.Clear();
 
+                Console.WriteLine("-------------------------money-> " + main + " <-money---------------------------------");
+                Console.WriteLine("");
                 DateTime timenow = DateTime.Now;
                 Console.WriteLine(timenow.AddYears(3));
                 Console.WriteLine("                            Press Enter To Continue                 ");
                 Console.ReadLine();
-
-
+                Console.Clear();
+                Console.WriteLine("-------------------------money-> " + main + " <-money---------------------------------");
+                Console.WriteLine("");
                 Console.WriteLine("looks like you are going to need some fuel now");
                 Console.WriteLine("how much would you like");
-                Console.WriteLine("1/2 full select : A | full select : B");
-                Console.WriteLine("                            Press Enter To Continue                 ");
-
+                Console.WriteLine("1/2 full 2000$ select : A | full 4000$ select : B");
+                Console.WriteLine("                                                            Press Enter To Continue                 ");
+                
                 string choose = Console.ReadLine();
                 switch (choose)
 
