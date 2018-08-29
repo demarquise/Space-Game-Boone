@@ -19,7 +19,8 @@ namespace Space_Game
         static string playername = "";
         static readonly int fuel1 = 2000;
         static readonly int fuel2 = 4000;
-        
+        static double travelTime = 0;
+        static double distance = 0;
 
         static void Main(string[] args)
         {
@@ -38,7 +39,7 @@ namespace Space_Game
             while (main > 0);
 
             Exit();
-
+            Equation();
         }
 
 
@@ -248,46 +249,62 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             bool myanswer = false;
             do
             {
-                
-                string myplanet = Console.ReadLine();
+
+                 string myplanet = Console.ReadLine();
                 if (myplanet.ToLower() == "a")
                 {
-                    Console.WriteLine("You have choosen planet BOT");
+                    Planet planet = new Planet();
+                    planet.Name = "BOT";
+                    Console.WriteLine("You choose planet " + planet.Name);
                     myanswer = true;
                 }
                 else if (myplanet.ToLower() == "b")
                 {
-                    Console.WriteLine("You choose planet TOPA");
+                    Planet planet = new Planet();
+                    planet.Name = "TOPA";
+                    Console.WriteLine("You choose planet " + planet.Name);
                     myanswer = true;
                 }
                 else if (myplanet.ToLower() == "c")
                 {
-                    Console.WriteLine("You choose planet KEWA");
+                    Planet planet = new Planet();
+                    planet.Name = "KEWA";
+                    Console.WriteLine("You choose planet " + planet.Name);
                     myanswer = true;
                 }
                 else if (myplanet.ToLower() == "d")
                 {
-                    Console.WriteLine("You choose planet DAD");
+                    Planet planet = new Planet();
+                    planet.Name = "DAD";
+                    Console.WriteLine("You choose planet " + planet.Name);
                     myanswer = true;
                 }
                 else if (myplanet.ToLower() == "e")
                 {
-                    Console.WriteLine("You choose planet MOM");
+                    Planet planet = new Planet();
+                    planet.Name = "MOM";
+                    Console.WriteLine("You choose planet " + planet.Name);
                     myanswer = true;
                 }
                 else if (myplanet.ToLower() == "f")
                 {
-                    Console.WriteLine("You choose planet HAM");
+                    Planet planet = new Planet();
+                    planet.Name = "HAM";
+                    Console.WriteLine("You choose planet " + planet.Name);
                     myanswer = true;
                 }
                 else if (myplanet.ToLower() == "g")
                 {
-                    Console.WriteLine("You choose planet BAT");
+                    Planet planet = new Planet();
+                    planet.Name = "BAT";
+                    Console.WriteLine("You choose planet " + planet.Name);
                     myanswer = true;
                 }
-                else if (myplanet.ToLower() == "h") 
+                else if (myplanet.ToLower() == "h")
                 {
-                    Console.WriteLine("You choose planet GOD");
+                    Planet planet = new Planet();
+                    planet.Name = "GOD";
+                    Console.WriteLine("You choose planet " + planet.Name);
                     myanswer = true;
                 }
                 else
@@ -301,7 +318,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine("Keep in mind each planet is 5 light years away.");
+            
             Console.WriteLine("Good luck " + playername + " on your advernture the time right below is the time it is now ");
 
             DateTime thetime = DateTime.Now;
@@ -335,22 +352,22 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.ReadLine();
             Console.Clear();
 
-            
+
             Console.WriteLine("How much cargo would you like to trade");
             Console.Write("Enter your number and press enter to continue:");
             string choice = "";
             choice = Console.ReadLine();
             main = main + Convert.ToInt32(choice);
 
-            
-            Console.WriteLine("you have traded " + choice );
+
+            Console.WriteLine("you have traded " + choice);
             Console.WriteLine("you have " + main + " now");
             Console.ReadLine();
             Console.WriteLine("                            Press Enter To Continue                 ");
             Console.Clear();
-             
 
-            
+
+
 
 
 
@@ -368,7 +385,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 Console.WriteLine("choice A | planet : BOT");
                 Console.WriteLine("choice B | planet : TOPA");
                 Console.WriteLine("Choice C | planet : KEWA");
-                Console.WriteLine("Enter A,B or C");
+                Console.WriteLine("Choice D | planet : DAD");
+                Console.WriteLine("Choice E | planet : MOM");
+                Console.WriteLine("Choice F | planet : HAM");
+                Console.WriteLine("Choice G | planet : BAT");
+                Console.WriteLine("Choice H | planet : GOD");
+                Console.WriteLine("Enter one from the list above");
                 Console.WriteLine("                            Press Enter To Continue                 ");
 
 
@@ -379,24 +401,63 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     string myplanet = Console.ReadLine();
                     if (myplanet.ToLower() == "a")
                     {
-                        
-                        Console.WriteLine("You have choosen planet BOT");
+                        Planet planet = new Planet();
+                        planet.Name = "BOT";
+                        Console.WriteLine("You choose planet " + planet.Name);
                         myanswer = true;
-                        
                     }
                     else if (myplanet.ToLower() == "b")
                     {
-                        Console.WriteLine("You choose planet TOPA");
+                        Planet planet = new Planet();
+                        planet.Name = "TOPA";
+                        Console.WriteLine("You choose planet " + planet.Name);
                         myanswer = true;
                     }
                     else if (myplanet.ToLower() == "c")
                     {
-                        Console.WriteLine("You choose planet KEWA");
+                        Planet planet = new Planet();
+                        planet.Name = "KEWA";
+                        Console.WriteLine("You choose planet " + planet.Name);
+                        myanswer = true;
+                    }
+                    else if (myplanet.ToLower() == "d")
+                    {
+                        Planet planet = new Planet();
+                        planet.Name = "DAD";
+                        Console.WriteLine("You choose planet " + planet.Name);
+                        myanswer = true;
+                    }
+                    else if (myplanet.ToLower() == "e")
+                    {
+                        Planet planet = new Planet();
+                        planet.Name = "MOM";
+                        Console.WriteLine("You choose planet " + planet.Name);
+                        myanswer = true;
+                    }
+                    else if (myplanet.ToLower() == "f")
+                    {
+                        Planet planet = new Planet();
+                        planet.Name = "HAM";
+                        Console.WriteLine("You choose planet " + planet.Name);
+                        myanswer = true;
+                    }
+                    else if (myplanet.ToLower() == "g")
+                    {
+                        Planet planet = new Planet();
+                        planet.Name = "BAT";
+                        Console.WriteLine("You choose planet " + planet.Name);
+                        myanswer = true;
+                    }
+                    else if (myplanet.ToLower() == "h")
+                    {
+                        Planet planet = new Planet();
+                        planet.Name = "GOD";
+                        Console.WriteLine("You choose planet " + planet.Name);
                         myanswer = true;
                     }
                     else
                     {
-                        Console.WriteLine("Choose A,B or C");
+                        Console.WriteLine("Choose Again");
                     }
 
                 } while (myanswer == false);
@@ -476,7 +537,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
         {
 
 
-            Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF TIME");
+            Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF M");
             Console.WriteLine("                            Press Enter To Continue                 ");
 
             Console.Title = "ASCII Art";
@@ -506,12 +567,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
         }
         public static void Equation()
         {
-            double travelTime = 0;
-            double distance = 0;
 
-     }
 
             
         }
+
+
     }
+}
 

@@ -9,5 +9,7 @@ namespace Space_Game
     class Planet
     {
         
+        public string Name;
+
     }
 }
