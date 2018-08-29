@@ -25,14 +25,14 @@ namespace Space_Game
         {
 
 
-            gamename();
-            ship();
-            cargo();
+            Gamename();
+            Ship();
+            Cargo();
 
             do
             {
-                planet();
-                nextplanet();
+                Planet();
+                Nextplanet();
 
             }
             while (main > 0);
@@ -42,7 +42,7 @@ namespace Space_Game
         }
 
 
-        public static void gamename()
+        public static void Gamename()
         {
 
 
@@ -129,7 +129,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
         }
-        public static void ship()
+        public static void Ship()
         {
 
             Console.WriteLine("Choice:A small ship = $500   | Cargo compacity = 5,000 lb  | 1 warp speed  ");
@@ -178,7 +178,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
         }
 
-        public static void cargo()
+        public static void Cargo()
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
@@ -226,7 +226,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.ReadLine();
             Console.Clear();
         }
-        public static void planet()
+        public static void Planet()
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
@@ -355,7 +355,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
         }
-        public static void nextplanet()
+        public static void Nextplanet()
         {
 
 
