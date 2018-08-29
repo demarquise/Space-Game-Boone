@@ -231,20 +231,18 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine("Choice C | planet : KEWA");
             Console.WriteLine("Enter A,B or C");
 
-            double travelTime = 0;
-            double distance = 23;
+          
 
             bool myanswer = false;
             do
             {
-
+                
                 string myplanet = Console.ReadLine();
                 if (myplanet.ToLower() == "a")
                 {
-                     travelTime = distance / (Math.Pow(1, 10 / 3) + Math.Pow(10 - 1, -11 / 3));
+                    
                      Console.WriteLine("You have choosen planet BOT");
                     myanswer = true;
-
                     
                 }
                 else if (myplanet.ToLower() == "b")
@@ -263,6 +261,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 }
 
             } while (myanswer == false);
+            
             Console.ReadLine();
             Console.Clear();
 
@@ -298,46 +297,21 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.ReadLine();
             Console.Clear();
 
+            
             Console.WriteLine("How much cargo would you like to trade");
-            Console.WriteLine("you can only trade 50,100,200");
-            Console.WriteLine("choose A for 50");
-            Console.WriteLine("choose B for 100");
-            Console.WriteLine("choose C for 200");
+            Console.Write("Enter your number :");
+            string choice = "";
+            choice = Console.ReadLine();
 
+            main = main + Convert.ToInt32(choice);
 
-
-            string pick = Console.ReadLine();
-
-            switch (pick)
-            {
-                case "a":
-                    main = main + 50;
-                    Console.WriteLine("you sold 50 punds of cargo");
-                    Console.WriteLine("you have " + main + " left");
-                    break;
-
-                case "b":
-                    main = main + 100;
-                    Console.WriteLine("you sold  100 pounds of cargo");
-                    Console.WriteLine("you have " + main + " left");
-                    break;
-
-                case "c":
-                    main = main + 200;
-                    Console.WriteLine("you sold 200 pounds of cargo");
-                    Console.WriteLine("you have " + main + " left");
-                    break;
-
-                default:
-                    Console.WriteLine("choose again");
-                    break;
-
-
-
-            }
-
+            Console.WriteLine("you have traded " + choice );
+            Console.WriteLine("you have " + main + " now");
             Console.ReadLine();
             Console.Clear();
+             
+
+            
 
 
 
@@ -364,8 +338,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     string myplanet = Console.ReadLine();
                     if (myplanet.ToLower() == "a")
                     {
+                        
                         Console.WriteLine("You have choosen planet BOT");
                         myanswer = true;
+                        
                     }
                     else if (myplanet.ToLower() == "b")
                     {
@@ -398,7 +374,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 Console.Title = "ASCII Art";
                 string pic = @"
 
-                    ──────────────▄▀█▀█▀▄
+                      ──────────────▄▀█▀█▀▄
 ─────────────▀▀▀▀▀▀▀▀▀ 
 ─────────────▄─░░░░░▄
 ───█──▄─▄───▐▌▌░░░░░▌▌
@@ -461,9 +437,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
 ░░░░░░░░░░░░░░░░░░
-░░░│▒│ ./▒/░░░░░░░░░
+░░░│▒./▒/░░░░░░░░░
 ░░░│▒│/▒/░░░░░░░░░░
-░░░│▒ /▒/.─┬─┐░░░░░░
+░░░│▒ /▒/.░░░░░░
 ░░░│▒│▒|▒│▒│░░░░░░░
 ░░░┌┴─┴─┐┘─┘░░░░░░
 ░░░│▒┌──┘▒▒▒│░░░░░
@@ -481,7 +457,15 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine(bye);
             Console.Read();
         }
+        public static void equation()
+        {
+            double travelTime = 0;
+            double distance = 0;
 
+            travelTime = distance / (Math.Pow(1, 10 / 3) + Math.Pow(10 - 1, -11 / 3));
 
+            
+        }
     }
+
 }
