@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Space_Game
 {
     class Program
@@ -19,8 +20,7 @@ namespace Space_Game
         static string playername = "";
         static readonly int fuel1 = 2000;
         static readonly int fuel2 = 4000;
-        static double travelTime = 0;
-        static double distance = 0;
+
 
         static void Main(string[] args)
         {
@@ -39,7 +39,7 @@ namespace Space_Game
             while (main > 0);
 
             Exit();
-            Equation();
+
         }
 
 
@@ -97,7 +97,7 @@ namespace Space_Game
             Console.Clear();
 
             Console.WriteLine("Good luck");
-
+            Console.WriteLine("-------------------------money-> " + main + " <-money---------------------------------");
             Console.Title = "ASCII Art";
             string sign = @"
 
@@ -132,7 +132,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
         }
         public static void Ship()
         {
-
+            Console.WriteLine("-------------------------money-> " + main + " <-money---------------------------------");
+            Console.WriteLine("");
             Console.WriteLine("Choice:A small ship = $500   | Cargo compacity = 5,000 lb  | 1 warp speed  ");
             Console.WriteLine("Choice:B medium ship = $1000 | Cargo compacity = 10,000 lb | 2 warp speed  ");
             Console.WriteLine("Choice:C large ship = $2,000 | Cargo compacity = 15,000 lb | 3 warp speed  ");
@@ -181,8 +182,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
         public static void Cargo()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-
+            
+            Console.WriteLine("-------------------------money-> " + main + " <-money---------------------------------");
+            Console.WriteLine("");
             Console.WriteLine("You can now tranport Uriuman ");
             Console.WriteLine("The trade value of uriuman is 1lb of uriuman is equal to 1 dallor.");
             Console.WriteLine("You choice of wheight of cargo is dependent on ship size.");
@@ -229,7 +231,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
         }
         public static void Planet()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("-------------------------money-> " + main + " <-money---------------------------------");
+            Console.WriteLine("");
 
             Console.WriteLine("Now " + playername + " has chosen cargo an a space ship and are ready to travel |--|");
             Console.WriteLine("What planet would you like to go to");
@@ -250,13 +253,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             do
             {
 
-                 string myplanet = Console.ReadLine();
+                string myplanet = Console.ReadLine();
                 if (myplanet.ToLower() == "a")
                 {
                     Planet planet = new Planet();
                     planet.Name = "BOT";
                     Console.WriteLine("You choose planet " + planet.Name);
                     myanswer = true;
+
                 }
                 else if (myplanet.ToLower() == "b")
                 {
@@ -318,7 +322,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.ReadLine();
             Console.Clear();
 
-            
+            Console.WriteLine("-------------------------money-> " + main + " <-money---------------------------------");
+            Console.WriteLine("");
             Console.WriteLine("Good luck " + playername + " on your advernture the time right below is the time it is now ");
 
             DateTime thetime = DateTime.Now;
@@ -345,6 +350,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.ReadLine();
             Console.Clear();
 
+            Console.WriteLine("-------------------------money-> " + main + " <-money---------------------------------");
+            Console.WriteLine("");
             Console.WriteLine("you have a arived at your destination");
             DateTime timenow = DateTime.Now;
             Console.WriteLine(timenow.AddYears(3));
@@ -352,8 +359,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.ReadLine();
             Console.Clear();
 
-
-            Console.WriteLine("How much cargo would you like to trade");
+            
+            Console.WriteLine("-------------------------money-> " + main + " <-money---------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("How much urianium would you like to trade for money");
             Console.Write("Enter your number and press enter to continue:");
             string choice = "";
             choice = Console.ReadLine();
@@ -537,7 +546,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
         {
 
 
-            Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF M");
+            Console.WriteLine("OOO NOOOO LOOKS LIKE YOU ARE OUT OF Money");
             Console.WriteLine("                            Press Enter To Continue                 ");
 
             Console.Title = "ASCII Art";
@@ -565,13 +574,16 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine(bye);
             Console.Read();
         }
-        public static void Equation()
+        
+        private static double Distance(double x1, double x2, double y1, double y2)
         {
 
+            var temp1 = Math.Pow((x2 - x1), 2);
+            var temp2 = Math.Pow((y2 - y1), 2);
+            var result = Math.Sqrt(temp1 + temp2);
 
-            
+            return result;
         }
-
 
     }
 }

@@ -10,6 +10,7 @@ namespace Space_Game
     {
         
         public string Name;
-
+       
     }
+
 }
