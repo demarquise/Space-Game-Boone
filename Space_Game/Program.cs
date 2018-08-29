@@ -235,7 +235,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             Console.WriteLine("choice A | planet : BOT");
             Console.WriteLine("choice B | planet : TOPA");
             Console.WriteLine("Choice C | planet : KEWA");
-            Console.WriteLine("Enter A,B or C");
+            Console.WriteLine("Choice D | planet : DAD");
+            Console.WriteLine("Choice E | planet : MOM");
+            Console.WriteLine("Choice F | planet : HAM");
+            Console.WriteLine("Choice G | planet : BAT");
+            Console.WriteLine("Choice H | planet : GOD");
+            Console.WriteLine("Enter one from the list above");
             Console.WriteLine("                            Press Enter To Continue                 ");
 
 
@@ -247,10 +252,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 string myplanet = Console.ReadLine();
                 if (myplanet.ToLower() == "a")
                 {
-                    
-                     Console.WriteLine("You have choosen planet BOT");
+                    Console.WriteLine("You have choosen planet BOT");
                     myanswer = true;
-                    
                 }
                 else if (myplanet.ToLower() == "b")
                 {
@@ -262,9 +265,34 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     Console.WriteLine("You choose planet KEWA");
                     myanswer = true;
                 }
+                else if (myplanet.ToLower() == "d")
+                {
+                    Console.WriteLine("You choose planet DAD");
+                    myanswer = true;
+                }
+                else if (myplanet.ToLower() == "e")
+                {
+                    Console.WriteLine("You choose planet MOM");
+                    myanswer = true;
+                }
+                else if (myplanet.ToLower() == "f")
+                {
+                    Console.WriteLine("You choose planet HAM");
+                    myanswer = true;
+                }
+                else if (myplanet.ToLower() == "g")
+                {
+                    Console.WriteLine("You choose planet BAT");
+                    myanswer = true;
+                }
+                else if (myplanet.ToLower() == "h") 
+                {
+                    Console.WriteLine("You choose planet GOD");
+                    myanswer = true;
+                }
                 else
                 {
-                    Console.WriteLine("Choose A,B or C");
+                    Console.WriteLine("Choose Again");
                 }
 
             } while (myanswer == false);
