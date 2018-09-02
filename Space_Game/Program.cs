@@ -368,6 +368,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
             choice = Console.ReadLine();
             main = main + Convert.ToInt32(choice);
 
+            
 
             Console.WriteLine("you have traded " + choice);
             Console.WriteLine("you have " + main + " now");
